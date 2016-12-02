@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Dec 02 20:26:25 CET 2016
+#Fri Dec 02 21:16:24 CET 2016
 175.set=ANDROID_RESOURCE
 122.file=C\:\\workspace\\android-BasicGestureDetect\\Application\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_ic_clear_material.xml
 60.set=ANDROID_RESOURCE

@@ -59,11 +59,11 @@ class LogView(context: Context, attrs: AttributeSet = null, defStyle: Int = 0)
     appendIfNotNull(outputBuilder, tag, delimiter)
     appendIfNotNull(outputBuilder, msg, delimiter)
     appendIfNotNull(outputBuilder, exceptionStr, delimiter)
-    (getContext.asInstanceOf[Activity]).runOnUiThread((new Thread(new Runnable() {
-      def run {
+    getContext.asInstanceOf[Activity].runOnUiThread(new Thread(new Runnable() {
+      def run():Unit= {
         appendToLog(outputBuilder.toString)
       }
-    })))
+    }))
     if (mNext != null) {
       mNext.println(priority, tag, msg, tr)
     }
@@ -79,12 +79,10 @@ class LogView(context: Context, attrs: AttributeSet = null, defStyle: Int = 0)
 
   private def appendIfNotNull(source: StringBuilder, addStr: String, delimiter: String): StringBuilder = {
     if (addStr != null) {
-      if (addStr.length == 0) {
-        return source.append(addStr).append("")
-      }
-      return source.append(addStr).append(delimiter)
+      val d = if (addStr.length == 0) "" else delimiter
+      source.append(addStr).append(d)
     }
-    return source
+    else source
   }
 
   private[logger] var mNext: LogNode = null

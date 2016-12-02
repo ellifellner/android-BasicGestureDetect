@@ -54,7 +54,7 @@ class  BasicGestureDetectFragment extends Fragment {
   }
 
   def clearLog {
-    val logFragment: LogFragment = (getActivity.getSupportFragmentManager.findFragmentById(R.id.log_fragment).asInstanceOf[LogFragment])
+    val logFragment: LogFragment = getActivity.getSupportFragmentManager.findFragmentById(R.id.log_fragment).asInstanceOf[LogFragment]
     logFragment.getLogView.setText("")
   }
 }

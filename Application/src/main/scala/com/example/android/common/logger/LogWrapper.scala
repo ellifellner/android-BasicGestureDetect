@@ -28,17 +28,25 @@ class LogWrapper extends LogNode {
     mNext = node
   }
 
+  /**
+    *
+    * @param priority
+    * @param tag
+    * @param msg
+    * @param tr
+    */
   override def println(priority: Int, tag: String, msg: String, tr: Throwable) {
     var useMsg: String = msg
     if (useMsg == null) {
       useMsg = ""
     }
-    if (tr != null) {
+    val message=
+      if (tr != null) {
       msg + "\n" + android.util.Log.getStackTraceString(tr)
-    }
-    Log.println(priority, tag, useMsg)
+    } else msg
+    android.util.Log.println(priority, tag, useMsg)
     if (mNext != null) {
-      mNext.println(priority, tag, msg, tr)
+      mNext.println(priority, tag, message, tr)
     }
   }
 }

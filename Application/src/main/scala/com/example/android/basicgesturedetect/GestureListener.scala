@@ -27,9 +27,9 @@ class GestureListener extends GestureDetector.SimpleOnGestureListener {
 
   val TAG: String = "GestureListener"
 
-  private def getTouchType(e: MotionEvent): String = {
+  def getTouchType(e: MotionEvent): String = {
     var touchTypeDescription: String = " "
-    val touchType: Int = e.getToolType(0)
+   val touchType: Int = e.getToolType(0)
     touchType match {
       case MotionEvent.TOOL_TYPE_FINGER =>
         touchTypeDescription += "(finger)"

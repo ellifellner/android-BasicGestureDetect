@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Dec 02 20:27:12 CET 2016
+#Fri Dec 02 21:17:04 CET 2016
 210.set=ANDROID_RESOURCE
 14.set=ANDROID_RESOURCE
 180.file=C\:\\workspace\\android-BasicGestureDetect\\Application\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png
