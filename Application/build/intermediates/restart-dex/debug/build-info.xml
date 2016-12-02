@@ -5,32 +5,33 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="29854720550292"
+    timestamp="35060138028769"
     token="-6640564774852899978"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="347" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="1134" />
     <task
         name="verifier"
-        duration="0" />
+        duration="128" />
+
+    <artifact
+        location="C:\workspace\android-BasicGestureDetect\Application\build\outputs\apk\Application-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="28789271443204"
+        timestamp="35060138028769"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\workspace\android-BasicGestureDetect\Application\build\outputs\apk\Application-debug.apk"
             type="MAIN" />
     </build>
-    <build
-        timestamp="29854720550292"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

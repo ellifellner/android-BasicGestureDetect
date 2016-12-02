@@ -62,20 +62,21 @@ class LogFragment extends Fragment {
     mLogView.setPadding(paddingPixels, paddingPixels, paddingPixels, paddingPixels)
     mLogView.setCompoundDrawablePadding(paddingPixels)
     mLogView.setGravity(Gravity.BOTTOM)
-    mLogView.setTextAppearance(getActivity, android.R.style.TextAppearance_Holo_Medium)
+//    mLogView.setTextAppearance(getActivity, android.R.style.TextAppearance_Holo_Medium)
     mScrollView.addView(mLogView)
     return mScrollView
   }
 
-  def onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle): View = {
+  override def onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle): View = {
     val result: View = inflateViews
     mLogView.addTextChangedListener(new TextWatcher() {
       def beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
       }
 
       def onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-      }def afterTextChanged(s: Editable) {
-        mScrollView.fullScroll(ScrollView.FOCUS_DOWN)
+      }
+      def afterTextChanged(s: Editable) {
+        mScrollView.fullScroll(View.FOCUS_DOWN)
       }
     })
     return result

@@ -25,11 +25,11 @@ object SampleActivityBase {
 }
 
 class SampleActivityBase extends FragmentActivity {
-  protected def onCreate(savedInstanceState: Bundle) {
+  override protected def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
   }
 
-  protected def onStart {
+  override protected def onStart {
     super.onStart
     initializeLogging
   }

@@ -37,7 +37,7 @@ class MainActivity extends SampleActivityBase {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
     if (getSupportFragmentManager.findFragmentByTag(MainActivity.FRAGTAG) == null) {
-      val transaction: Nothing = getSupportFragmentManager.beginTransaction
+      val transaction: FragmentTransaction = getSupportFragmentManager.beginTransaction
       val fragment: BasicGestureDetectFragment = new BasicGestureDetectFragment
       transaction.add(fragment, MainActivity.FRAGTAG)
       transaction.commit
@@ -56,7 +56,7 @@ class MainActivity extends SampleActivityBase {
     logWrapper.setNext(msgFilter)
     val logFragment: LogFragment = getSupportFragmentManager.findFragmentById(R.id.log_fragment).asInstanceOf[LogFragment]
     msgFilter.setNext(logFragment.getLogView)
-    logFragment.getLogView.setTextAppearance(this, R.style.Log)
+    //logFragment.getLogView.setTextAppearance(this, R.style.Log)
     logFragment.getLogView.setBackgroundColor(Color.WHITE)
     Log.i(MainActivity.TAG, "Ready")
   }

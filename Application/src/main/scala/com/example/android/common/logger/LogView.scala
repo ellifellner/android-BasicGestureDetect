@@ -20,21 +20,10 @@ import android.content.Context
 import android.util._
 import android.widget.TextView
 
-class LogView extends TextView with LogNode {
-  def this(context: Context) {
-    this()
-    super(context)
-  }
 
-  def this(context: Context, attrs: AttributeSet) {
-    this()
-    super(context, attrs)
-  }
+class LogView(context: Context, attrs: AttributeSet = null, defStyle: Int = 0)
+  extends TextView(context, attrs, defStyle) with LogNode {
 
-  def this(context: Context, attrs: AttributeSet, defStyle: Int) {
-    this()
-    super(context, attrs, defStyle)
-  }
 
   def println(priority: Int, tag: String, msg: String, tr: Throwable) {
     var priorityStr: String = null
@@ -91,7 +80,7 @@ class LogView extends TextView with LogNode {
   private def appendIfNotNull(source: StringBuilder, addStr: String, delimiter: String): StringBuilder = {
     if (addStr != null) {
       if (addStr.length == 0) {
-        delimiter = ""
+        return source.append(addStr).append("")
       }
       return source.append(addStr).append(delimiter)
     }

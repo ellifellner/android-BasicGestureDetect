@@ -25,13 +25,13 @@ import android.view.View
 import com.example.android.common.logger.Log
 import com.example.android.common.logger.LogFragment
 
-class BasicGestureDetectFragment extends Fragment {
-  def onCreate(savedInstanceState: Bundle) {
+class  BasicGestureDetectFragment extends Fragment {
+ override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setHasOptionsMenu(true)
   }
 
-  def onActivityCreated(savedInstanceState: Bundle) {
+  override def onActivityCreated(savedInstanceState: Bundle) {
     super.onActivityCreated(savedInstanceState)
     val gestureView: View = getActivity.findViewById(R.id.sample_output)
     gestureView.setClickable(true)
@@ -46,7 +46,7 @@ class BasicGestureDetectFragment extends Fragment {
     })
   }
 
-  def onOptionsItemSelected(item: MenuItem): Boolean = {
+  override def onOptionsItemSelected(item: MenuItem): Boolean = {
     if (item.getItemId == R.id.sample_action) {
       clearLog
     }

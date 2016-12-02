@@ -79,45 +79,45 @@ class GestureListener extends GestureDetector.SimpleOnGestureListener {
     return buttons
   }
   override def onSingleTapUp(e: MotionEvent): Boolean = {
-    Log.i(GestureListener.TAG, "Single Tap Up" + GestureListener.getTouchType(e))
+    Log.i(this.TAG, "Single Tap Up" + getTouchType(e))
     return false
   }
 
   override def onLongPress(e: MotionEvent) {
-    Log.i(GestureListener.TAG, "Long Press" + GestureListener.getTouchType(e))
+    Log.i(this.TAG, "Long Press" + getTouchType(e))
   }
 
   override def onScroll(e1: MotionEvent, e2: MotionEvent, distanceX: Float, distanceY: Float): Boolean = {
-    Log.i(GestureListener.TAG, "Scroll" + GestureListener.getTouchType(e1))
+    Log.i(this.TAG, "Scroll" + getTouchType(e1))
     return false
   }
 
   override def onFling(e1: MotionEvent, e2: MotionEvent, velocityX: Float, velocityY: Float): Boolean = {
-    Log.i(GestureListener.TAG, "Fling" + GestureListener.getTouchType(e1))
+    Log.i(this.TAG, "Fling" + getTouchType(e1))
     return false
   }
 
   override def onShowPress(e: MotionEvent) {
-    Log.i(GestureListener.TAG, "Show Press" + GestureListener.getTouchType(e))
+    Log.i(this.TAG, "Show Press" + getTouchType(e))
   }
 
   override def onDown(e: MotionEvent): Boolean = {
-    Log.i(GestureListener.TAG, "Down" + GestureListener.getTouchType(e))
+    Log.i(this.TAG, "Down" + getTouchType(e))
     return false
   }
 
   override def onDoubleTap(e: MotionEvent): Boolean = {
-    Log.i(GestureListener.TAG, "Double tap" + GestureListener.getTouchType(e))
+    Log.i(this.TAG, "Double tap" + getTouchType(e))
     return false
   }
 
   override def onDoubleTapEvent(e: MotionEvent): Boolean = {
-    Log.i(GestureListener.TAG, "Event within double tap" + GestureListener.getTouchType(e))
+    Log.i(this.TAG, "Event within double tap" + getTouchType(e))
     return false
   }
 
   override def onSingleTapConfirmed(e: MotionEvent): Boolean = {
-    Log.i(GestureListener.TAG, "Single tap confirmed" + GestureListener.getTouchType(e))
+    Log.i(this.TAG, "Single tap confirmed" + getTouchType(e))
     return false
   }
 }
