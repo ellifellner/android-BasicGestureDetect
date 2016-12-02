@@ -1,0 +1,7 @@
+#Fri Dec 02 18:25:18 CET 2016
+base.0=C\:\\workspace\\android-BasicGestureDetect\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_44091a12b0129b4df16f9cd3adbcce7c63d7516a
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\workspace\\android-BasicGestureDetect\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_ed7dc6890a59022ec59ee990668ad2969effca4a\\classes.dex
+base.1=C\:\\workspace\\android-BasicGestureDetect\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_ed7dc6890a59022ec59ee990668ad2969effca4a
+file.0=C\:\\workspace\\android-BasicGestureDetect\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_44091a12b0129b4df16f9cd3adbcce7c63d7516a\\classes.dex
