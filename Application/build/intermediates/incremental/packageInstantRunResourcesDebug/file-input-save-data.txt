@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Dec 02 18:24:49 CET 2016
+#Fri Dec 02 18:41:26 CET 2016
 122.file=C\:\\workspace\\android-BasicGestureDetect\\Application\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_ic_go_search_api_material.xml
 60.set=ANDROID_RESOURCE
 129.file=C\:\\workspace\\android-BasicGestureDetect\\Application\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\notification_template_media.xml

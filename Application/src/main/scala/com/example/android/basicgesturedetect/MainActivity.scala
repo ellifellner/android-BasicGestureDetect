@@ -31,6 +31,8 @@ object MainActivity {
 }
 
 class MainActivity extends SampleActivityBase {
+
+
   override protected def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
@@ -42,7 +44,7 @@ class MainActivity extends SampleActivityBase {
     }
   }
 
-  def onCreateOptionsMenu(menu: Menu): Boolean = {
+  override def onCreateOptionsMenu(menu: Menu): Boolean = {
     getMenuInflater.inflate(R.menu.main, menu)
     return true
   }

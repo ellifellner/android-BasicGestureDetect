@@ -21,7 +21,10 @@ import android.view.GestureDetector
 import android.view.MotionEvent
 import com.example.android.common.logger.Log
 
-object GestureListener {
+
+
+class GestureListener extends GestureDetector.SimpleOnGestureListener {
+
   val TAG: String = "GestureListener"
 
   private def getTouchType(e: MotionEvent): String = {
@@ -30,7 +33,7 @@ object GestureListener {
     touchType match {
       case MotionEvent.TOOL_TYPE_FINGER =>
         touchTypeDescription += "(finger)"
-        break //todo: break is not supported
+      //break //todo: break is not supported
       case MotionEvent.TOOL_TYPE_STYLUS =>
         touchTypeDescription += "(stylus, "
         val stylusPressure: Float = e.getPressure
@@ -39,16 +42,16 @@ object GestureListener {
           touchTypeDescription += ", buttons pressed: " + getButtonsPressed(e)
         }
         touchTypeDescription += ")"
-        break //todo: break is not supported
+      //break //todo: break is not supported
       case MotionEvent.TOOL_TYPE_ERASER =>
         touchTypeDescription += "(eraser)"
-        break //todo: break is not supported
+      //break //todo: break is not supported
       case MotionEvent.TOOL_TYPE_MOUSE =>
         touchTypeDescription += "(mouse)"
-        break //todo: break is not supported
+      //break //todo: break is not supported
       case _ =>
         touchTypeDescription += "(unknown tool)"
-        break //todo: break is not supported
+      //break //todo: break is not supported
     }
     return touchTypeDescription
   }
@@ -75,9 +78,6 @@ object GestureListener {
     }
     return buttons
   }
-}
-
-class GestureListener extends GestureDetector.SimpleOnGestureListener {
   override def onSingleTapUp(e: MotionEvent): Boolean = {
     Log.i(GestureListener.TAG, "Single Tap Up" + GestureListener.getTouchType(e))
     return false

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Dec 02 18:25:18 CET 2016
+#Fri Dec 02 18:41:55 CET 2016
 175.set=ANDROID_RESOURCE
 122.file=C\:\\workspace\\android-BasicGestureDetect\\Application\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png
 60.set=ANDROID_RESOURCE
